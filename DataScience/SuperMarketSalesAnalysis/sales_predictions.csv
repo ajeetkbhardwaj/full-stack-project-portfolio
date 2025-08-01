@@ -1,0 +1,6 @@
+prediction_id,invoice_id,predicted_customer_type,prediction_timestamp
+1,532-59-7201,Normal,2025-07-28 13:40:50
+2,701-69-8742,Normal,2025-07-28 13:40:50
+3,704-10-4056,Normal,2025-07-28 13:40:50
+4,635-28-5728,Normal,2025-07-28 13:40:50
+5,431-66-2305,Member,2025-07-28 13:40:50
