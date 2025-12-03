@@ -1,0 +1,6 @@
+python-dotenv==1.0.1
+llama-index==0.12.6
+llama-index-llms-openrouter==0.1.12
+pymupdf==1.25.1
+gradio==4.44.0
+nest-asyncio==1.6.0
