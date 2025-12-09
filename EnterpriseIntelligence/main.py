@@ -5,8 +5,11 @@ from langgraph.prebuilt import create_react_agent
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langchain_core.messages import HumanMessage
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Config
-os.environ["GOOGLE_API_KEY"] = "YOUR_GEMINI_KEY"
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 async def main():
     # 1. Initialize MCP Client to connect to BOTH servers
@@ -14,12 +17,12 @@ async def main():
     async with MultiServerMCPClient({
         "knowledge": {
             "command": "python",
-            "args": ["knowledge_server.py"],
+            "args": ["servers/knowledge.py"],
             "transport": "stdio"
         },
         "actions": {
             "command": "python",
-            "args": ["tools_server.py"],
+            "args": ["servers/actions.py"],
             "transport": "stdio"
         }
     }) as client:

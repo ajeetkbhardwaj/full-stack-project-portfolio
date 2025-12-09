@@ -1,28 +1,23 @@
 # --- Core MCP & Orchestration ---
 mcp>=1.0.0
-langchain-mcp-adapters
-langgraph>=0.2.0
-langchain>=0.3.0
+langchain-mcp-adapters>=0.1.3
+langgraph>=0.2.30
+langchain>=0.3.7
 
 # --- Google Gemini Integrations ---
-# For LangChain/LangGraph Agent
-langchain-google-genai>=2.0.0
-# For LlamaIndex RAG
-llama-index-llms-gemini
-llama-index-embeddings-google
+langchain-google-genai>=2.0.2
+llama-index-llms-gemini>=0.2.0
+llama-index-embeddings-google>=0.2.0
 
 # --- LlamaIndex Core & Data ---
-llama-index-core>=0.11.0
-llama-index-readers-file
+llama-index-core>=0.11.32
+llama-index-readers-file>=0.1.0
 
 # --- Server & Async Utilities ---
-# Crucial for running async code in Colab cells
-nest_asyncio
-# Standard server dependencies
-uvicorn
-fastapi
-python-dotenv
+nest_asyncio>=1.6.0
+uvicorn>=0.29.0
+fastapi>=0.110.0
+python-dotenv>=1.0.1
 
 # --- Demo Utilities ---
-# Used to generate the PDF for your project
-reportlab
+reportlab>=4.0.9

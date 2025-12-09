@@ -4,8 +4,11 @@ from llama_index.llms.gemini import Gemini
 from llama_index.embeddings.google import GooglePaLMEmbedding
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # 1. Setup LlamaIndex Settings (Use Gemini for RAG reasoning too!)
-os.environ["GOOGLE_API_KEY"] = "YOUR_GEMINI_KEY"
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 Settings.llm = Gemini(model="models/gemini-1.5-pro")
 Settings.embedding = GooglePaLMEmbedding(model_name="models/embedding-001")
 
